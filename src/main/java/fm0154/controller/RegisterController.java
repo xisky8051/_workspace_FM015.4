@@ -7,6 +7,7 @@ import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.hibernate.internal.build.AllowSysOut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -23,7 +24,7 @@ import fm0154.service.MailService;
 import fm0154.service.MemberService;
 
 @Controller
-@SessionAttributes({"email", "register"})
+@SessionAttributes({"email", "register","email1","email2"})
 public class RegisterController {
 
 	@Autowired
@@ -48,6 +49,13 @@ public class RegisterController {
 			@RequestParam("email") String email, 
 			@RequestParam("phone") String phone,
 			@RequestParam("password") String password) {
+		
+		System.out.println("request.getScheme():"+request.getScheme());
+		System.out.println("request.getServerName():"+request.getServerName());
+		System.out.println("request.getServerPort()"+request.getServerPort());
+		System.out.println("request.getContextPath()"+request.getContextPath());
+		
+		
 		try {
 			String path = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 					+ "/fm0154";
@@ -55,27 +63,30 @@ public class RegisterController {
 			Date createTime = new Date();
 			String codeRaw = id + "@" + new SimpleDateFormat("yyyy-MM-dd$hh:mm:ss").format(createTime);
 			String code = passwordEncoder.encode(codeRaw).replace("/", ".");
+			System.out.println("passwordEncoder.encode(codeRaw).replace(\"/\", \".\"):"+code);
 			// add
 			MemberService.addMember(
 				new Member(
-					1, 
+					6, 
 					name, 
-					email, 
+					email+"他抓了這個", 
 					null,
 					null, 
 					phone, 
 					password));
 			//
 			mailServer.sendMail(
-				"FM015.4 註冊確認信",
+				"FM015.4 註冊確認信(開頭)",
 				"<p>" + 
-				"    請點擊下列驗證連結 : <br />" + 
+				"    請點擊下列驗證連結(html5格式) : <br />" + 
 				"    " + path + "/key?code=" + code + 
 				"</p>", 
 				email);
 			ClientService.register = 1;
 			model.addAttribute("register", ClientService.register);
 			model.addAttribute("email", email);
+			model.addAttribute("email2", "測試測試:要取用email2要改login.jsp下面的js${}");
+//			model.addAttribute("email2", email);
 			response.sendRedirect("index");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -92,10 +103,12 @@ public class RegisterController {
 		try {
 			ClientService.register = 2;
 			model.addAttribute("register", ClientService.register);
+			System.out.println(ClientService.register);
 			response.sendRedirect("login");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println("==========");
 	}
 
 }

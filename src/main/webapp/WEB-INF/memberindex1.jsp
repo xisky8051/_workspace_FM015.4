@@ -116,7 +116,7 @@
 		<div style="display: flex; justify-content: space-around;">
 			<a href="/fm0154/productdetails/5"
 				class="btn btn-primary">瀏覽頁面</a> <a
-				href="/memberindexCheck?self=16&other=5"
+				href="/fm0154/memberindexCheck?self=16&other=5"
 				class="btn btn-success" onclick="doing();">確認登記</a>
 		</div>
 	</div>
@@ -134,7 +134,8 @@
 		<div style="display: flex; justify-content: space-around;">
 			<a href="/fm0154/productdetails/17"
 				class="btn btn-primary">瀏覽頁面</a> <a
-				href="/fm0154/memberindexCheck?16=1&other=17"
+				href="/fm0154/memberindexCheck/17?name=${memberIndex.getName()}
+						&email=${memberIndex.getEmail()}"
 				class="btn btn-success" onclick="doing();">確認登記</a>
 		</div>
 	</div>
@@ -152,7 +153,7 @@
 		<div style="display: flex; justify-content: space-around;">
 			<a href="/fm0154/productdetails/1"
 				class="btn btn-primary">瀏覽頁面</a> <a
-				href="/memberindexCheck?self=16&other=1"
+				href="/fm0154/memberindexCheck?self=16&other=1"
 				class="btn btn-success" onclick="doing();">確認登記</a>
 		</div>
 	</div>
@@ -170,7 +171,7 @@
 		<div style="display: flex; justify-content: space-around;">
 			<a href="/fm0154/productdetails/7"
 				class="btn btn-primary">瀏覽頁面</a> <a
-				href="/memberindexCheck?self=16&other=7"
+				href="/fm0154/memberindexCheck?self=16&other=7"
 				class="btn btn-success" onclick="doing();">確認登記</a>
 		</div>
 	</div>
@@ -190,7 +191,7 @@
 		<div style="display: flex; justify-content: space-around;">
 			<a href="/fm0154/productdetails/13"
 				class="btn btn-primary">瀏覽頁面</a> <a
-				href="/memberindexCheck?self=16&other=13"
+				href="/fm0154/memberindexCheck?self=16&other=13"
 				class="btn btn-success" onclick="doing();">確認登記</a>
 		</div>
 	</div>
@@ -208,7 +209,7 @@
 		<div style="display: flex; justify-content: space-around;">
 			<a href="/fm0154/productdetails/10"
 				class="btn btn-primary">瀏覽頁面</a> <a
-				href="/memberindexCheck?self=16&other=10"
+				href="/fm0154/memberindexCheck?self=16&other=10"
 				class="btn btn-success" onclick="doing();">確認登記</a>
 		</div>
 	</div>
@@ -226,7 +227,7 @@
 		<div style="display: flex; justify-content: space-around;">
 			<a href="/fm0154/productdetails/6"
 				class="btn btn-primary">瀏覽頁面</a> <a
-				href="/memberindexCheck?self=16&other=6"
+				href="/fm0154/memberindexCheck?self=16&other=6"
 				class="btn btn-success" onclick="doing();">確認登記</a>
 		</div>
 	</div>
@@ -244,7 +245,7 @@
 		<div style="display: flex; justify-content: space-around;">
 			<a href="/fm0154/productdetails/8"
 				class="btn btn-primary">瀏覽頁面</a> <a
-				href="/memberindexCheck?self=16&other=8"
+				href="/fm0154/memberindexCheck?self=16&other=8"
 				class="btn btn-success" onclick="doing();">確認登記</a>
 		</div>
 	</div>
@@ -266,7 +267,7 @@
 <!-- 									<div style="display: flex; justify-content: space-around;"> -->
 <%-- 										<a href="/fm0154/productdetails/${ memberIndex.id }" --%>
 <!-- 											class="btn btn-primary">瀏覽頁面</a> <a -->
-<%-- 											href="<c:url value="/memberindexCheck?self=16&other=${ memberIndex.id }" />" --%>
+<%-- 											href="<c:url value="/fm0154/memberindexCheck?self=16&other=${ memberIndex.id }" />" --%>
 <!-- 											class="btn btn-success" onclick="doing();">確認登記</a> -->
 <!-- 									</div> -->
 <!-- 								</div> -->

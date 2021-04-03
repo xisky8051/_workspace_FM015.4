@@ -17,7 +17,7 @@ import fm0154.service.ClientService;
 import fm0154.service.MemberService;
 
 @Controller
-@SessionAttributes({"register", "mail"})
+@SessionAttributes({"register", "mail"})//, "mail"
 public class LoginController {
 
 	@GetMapping("/login")

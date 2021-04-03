@@ -24,6 +24,8 @@ public class MemberDao {
 				"0910772249", "Do!ng123"));
 		members.add(new Member(4, "管理員", "rock.lin@gmail.com", new Date(20, 1, 5, 6, 45), new Date(21, 2, 1, 11, 50),
 				"0989162337", "Do!ng123"));
+		members.add(new Member(5, "黃柏凱", "chars0629@gmail.com", new Date(20, 1, 5, 6, 45), new Date(21, 2, 1, 11, 50),
+				"0912345678", "Do!ng123"));
 	}
 
 	// 外部取得示範資料用之呼叫方法
