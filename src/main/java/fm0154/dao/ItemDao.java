@@ -18,7 +18,7 @@ public class ItemDao {
 		items.add(new Item(5, "舊書", "絕命青茶", "5-1.jpg", "5-2.jpg", "5-3.jpg"));
 		items.add(new Item(6, "伊坂幸太郎 推理小說 二手書", "半糖不加冰", "6-1.jpg"));
 		items.add(new Item(7, "Asus外接式薄型光碟機（二手良品）", "阿明電器行", "7-1.jpg", "7-2.jpg"));
-		items.add(new Item(8, "全新chanel唇膏 YSL 圓管 雪絨唇釉 GA 紅管 黑管 唇露 專櫃唇膏", "阿嬸甘仔店", "8-1.jpg", "8-2.jpg", "7-3.jpg"));
+		items.add(new Item(8, "全新chanel唇膏 YSL 圓管 雪絨唇釉 GA 紅管 黑管 唇露 專櫃唇膏", "阿嬸甘仔店", "8-1.jpg", "7-3.jpg"));
 		items.add(new Item(9, "硅膠貓爪筆袋", "今天的貓奴", "9-1.jpg"));
 		items.add(new Item(10, "五月花厚衛生紙一串", "我家不在全家", "10-1.jpg", "10-2.jpg", "10-3.jpg"));
 		items.add(new Item(11, "男用夾腳拖 美國帶回 12吋", "BuyalotUS", "11-1.jpg"));
